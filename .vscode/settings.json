@@ -1,0 +1,14 @@
+// Place your settings in this file to overwrite default and user settings.
+{
+    // Path to the git executable
+	"git.path": "C:\\Users\\vladimirpavk\\AppData\\Local\\GitHub\\PortableGit_25d850739bc178b2eb13c3e2a9faafea2f9143c0\\mingw32\\libexec\\git-core\\git.exe",
+    "files.autoSaveDelay": 2000,
+    "files.autoSave": "afterDelay",
+    "files.exclude": {
+       "**/.git": true,
+       "client/app/**/.js.map": true,
+       "client/app/**/*.js": true,
+       "server/**/*.js.map": true,
+       "server/**/*.js": true
+      }
+}
