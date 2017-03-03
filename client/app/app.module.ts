@@ -1,9 +1,10 @@
 /// <reference path="../../node_modules/@angular/common/index.d.ts" />
 import { NgModule }      from '@angular/core';
-import { BrowserModule } from '@angular/platform-browser';
+import { CommonComponentsModule } from './modules/commoncomponents/commoncomponents.module';
 import { AppComponent }   from './app.component';
+
 @NgModule({
-  imports:      [ BrowserModule ],
+  imports:      [ CommonComponentsModule ],
   declarations: [ AppComponent ],
   bootstrap:    [ AppComponent ]
 })
