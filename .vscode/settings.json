@@ -11,4 +11,6 @@
        "server/**/*.js.map": true,
        "server/**/*.js": true
       }
+,
+"typescript.tsdk": "./node_modules/typescript/lib"
 }
