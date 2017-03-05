@@ -41,6 +41,8 @@ export class BlinkMessageComponent implements OnInit{
 
     ngOnInit(){
         this._title="PopUp Component";
+        this.setType();
+        this.setPostion();
     }    
 
     private setType(): void{
@@ -105,10 +107,17 @@ export class BlinkMessageComponent implements OnInit{
                 break;
             };
             case "br":{
-                this.positio_br
-            }
-
-
+                this.position_br = true;
+                break;
+            };
+            case "bm":{
+                this.position_bm = true;
+                break;
+            };
+            case "bl":{
+                this.position_bl = true;
+                break;
+            };
         }
     }
 

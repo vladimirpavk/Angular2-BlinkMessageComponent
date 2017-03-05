@@ -1,3 +1,24 @@
-<div [class.show]="!isShown" class="hide pozicija" [class.boja_ok] = "ok" [class.boja_notok]="!ok">
+<!-- <div [class.show]="!isShown" class="hide pozicija" [class.boja_ok] = "ok" [class.boja_notok]="!ok">
   <ng-content></ng-content>  
+</div> -->
+
+<div [class.show]="!isShown"
+     class="hide"
+     [class.label-default]="type_default"
+     [class.label-primary]="type_primary"
+     [class.label-success]="type_success"
+     [class.label-info]="type_info"
+     [class.label-warning]="type_warning"
+     [class.label-danger]="type_danger"
+     [class.position_tr]="position_tr"
+     [class.position_tm]="position_tm"
+     [class.position_tl]="position_tl"
+     [class.position_cr]="position_cr"
+     [class.position_cm]="position_cm"
+     [class.position_cl]="position_cl"
+     [class.position_br]="position_br"
+     [class.position_bm]="position_bm"
+     [class.position_bl]="position_bl"
+>
+  <ng-content></ng-content>
 </div>
