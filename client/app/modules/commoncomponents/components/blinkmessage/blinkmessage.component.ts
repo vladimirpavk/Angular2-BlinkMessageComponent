@@ -17,8 +17,10 @@ export class BlinkMessageComponent implements OnInit{
     private _title:string;
     private isShown: boolean = true;
 
-    @Input() type: string = "default";
-    @Input() position: string ="tr";
+    private intervalCounter: number = 0;
+
+    @Input() type: string = "primary";
+    @Input() position: string ="tm";
 
     private type_default: boolean = false;
     private type_primary: boolean = false;
@@ -78,6 +80,7 @@ export class BlinkMessageComponent implements OnInit{
                 break;
             }
         }
+        console.log("Type primary : "+this.type_primary);
     }
 
     private setPostion(): void{
@@ -119,9 +122,10 @@ export class BlinkMessageComponent implements OnInit{
                 break;
             };
         }
+        console.log("This position : "+this.position_tr);
     }
 
-    public flashOnce(): void{        
+    public blinkOnce(): void{        
         this.isShown=!this.isShown;
 
         setTimeout(()=> {            
@@ -129,11 +133,22 @@ export class BlinkMessageComponent implements OnInit{
         }, this.setTimeout);
     }
 
-    public startFlashing(): void{
+    public startBlinking(): void{
+        //if already blinking do nothing
+        if(this.intervalCounter!=0) return;
+
         this.isShown=!this.isShown;
 
-        setInterval(()=> {            
+        this.intervalCounter=setInterval(()=> {            
             this.isShown=!this.isShown;        
         }, this.setTimeout);
     }
+
+    public stopBlinking(){
+        if(this.intervalCounter != 0){
+            clearInterval(this.intervalCounter);
+            this.intervalCounter=0;
+        }
+    }
+
 }

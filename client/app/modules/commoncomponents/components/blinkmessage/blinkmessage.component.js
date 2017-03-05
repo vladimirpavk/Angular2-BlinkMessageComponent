@@ -24,21 +24,149 @@ System.register(["@angular/core"], function (exports_1, context_1) {
                     this.popUpText = "All of these elements will be faded out using a CSS3 opacity transition.";
                     this.ok = false;
                     this.isShown = true;
+                    this.intervalCounter = 0;
+                    this.type = "primary";
+                    this.position = "tm";
+                    this.type_default = false;
+                    this.type_primary = false;
+                    this.type_success = false;
+                    this.type_info = false;
+                    this.type_warning = false;
+                    this.type_danger = false;
+                    this.position_tr = false;
+                    this.position_tm = false;
+                    this.position_tl = false;
+                    this.position_cr = false;
+                    this.position_cm = false;
+                    this.position_cl = false;
+                    this.position_br = false;
+                    this.position_bm = false;
+                    this.position_bl = false;
                 }
                 ngOnInit() {
                     this._title = "PopUp Component";
+                    this.setType();
+                    this.setPostion();
                 }
-                flashOnce() {
+                setType() {
+                    switch (this.type) {
+                        case "default":
+                            {
+                                this.type_default = true;
+                                break;
+                            }
+                            ;
+                        case "primary":
+                            {
+                                this.type_primary = true;
+                                break;
+                            }
+                            ;
+                        case "success":
+                            {
+                                this.type_success = true;
+                                break;
+                            }
+                            ;
+                        case "info":
+                            {
+                                this.type_info = true;
+                                break;
+                            }
+                            ;
+                        case "warning":
+                            {
+                                this.type_warning = true;
+                                break;
+                            }
+                            ;
+                        case "danger":
+                            {
+                                this.type_danger = true;
+                                break;
+                            }
+                    }
+                    console.log("Type primary : " + this.type_primary);
+                }
+                setPostion() {
+                    switch (this.position) {
+                        case "tr":
+                            {
+                                this.position_tr = true;
+                                break;
+                            }
+                            ;
+                        case "tm":
+                            {
+                                this.position_tm = true;
+                                break;
+                            }
+                            ;
+                        case "tl":
+                            {
+                                this.position_tl = true;
+                                break;
+                            }
+                            ;
+                        case "cr":
+                            {
+                                this.position_cr = true;
+                                break;
+                            }
+                            ;
+                        case "cm":
+                            {
+                                this.position_cm = true;
+                                break;
+                            }
+                            ;
+                        case "cl":
+                            {
+                                this.position_cl = true;
+                                break;
+                            }
+                            ;
+                        case "br":
+                            {
+                                this.position_br = true;
+                                break;
+                            }
+                            ;
+                        case "bm":
+                            {
+                                this.position_bm = true;
+                                break;
+                            }
+                            ;
+                        case "bl":
+                            {
+                                this.position_bl = true;
+                                break;
+                            }
+                            ;
+                    }
+                    console.log("This position : " + this.position_tr);
+                }
+                blinkOnce() {
                     this.isShown = !this.isShown;
                     setTimeout(() => {
                         this.isShown = !this.isShown;
                     }, this.setTimeout);
                 }
-                startFlashing() {
+                startBlinking() {
+                    //if already blinking do nothing
+                    if (this.intervalCounter != 0)
+                        return;
                     this.isShown = !this.isShown;
-                    setInterval(() => {
+                    this.intervalCounter = setInterval(() => {
                         this.isShown = !this.isShown;
                     }, this.setTimeout);
+                }
+                stopBlinking() {
+                    if (this.intervalCounter != 0) {
+                        clearInterval(this.intervalCounter);
+                        this.intervalCounter = 0;
+                    }
                 }
             };
             __decorate([
@@ -53,6 +181,14 @@ System.register(["@angular/core"], function (exports_1, context_1) {
                 core_1.Input(),
                 __metadata("design:type", Boolean)
             ], BlinkMessageComponent.prototype, "ok", void 0);
+            __decorate([
+                core_1.Input(),
+                __metadata("design:type", String)
+            ], BlinkMessageComponent.prototype, "type", void 0);
+            __decorate([
+                core_1.Input(),
+                __metadata("design:type", String)
+            ], BlinkMessageComponent.prototype, "position", void 0);
             BlinkMessageComponent = __decorate([
                 core_1.Component({
                     moduleId: __moduleName,
