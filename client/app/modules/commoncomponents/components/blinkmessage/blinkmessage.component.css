@@ -16,8 +16,8 @@ transition: .5s ease-in-out all;
 
 .position_tr{
     position: fixed;
-    top: 0px;
-    right: 0px;
+    top: 15px;
+    right: 15px;
     width: 300px; 
 }
 
@@ -25,69 +25,100 @@ transition: .5s ease-in-out all;
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
-    top: 30px;
-    margin-right: auto;
-    margin-left: auto;
-    width: 300px; 
-    background-color: blue;
-    border-width: 3px;
-    border-color: lightgreen;
+    top: 15px;  
+    width: 300px;   
 }
 
 .position_tl{
     position: fixed;
-    top: 0px;
-    left: 0px;
+    top: 15px;
+    left: 15px;
     width: 300px; 
 }
 
 .position_cr{
     position: fixed;
-    margin-top: auto;
-    margin-bottom: auto;
-    right: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    right: 15px;
     width: 300px; 
 }
 
 .position_cm{
     position: fixed;
-    margin-top: auto;
-    margin-bottom: auto;
-    margin-left: auto;
-    margin-right: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
     width: 300px; 
 }
 
 .position_cl{
     position: fixed;
-    margin-top: auto;
-    margin-bottom: auto;
-    left: 0px;
+    top: 50%;
+    transform: translateY(-50%);
+    left: 15px;
     width: 300px; 
 }
 
 .position_br{
     position: fixed;
-    bottom: 0px;
-    right: 0px;
+    bottom: 15px;
+    right: 15px;
     width: 300px; 
 }
 
 .position_bm{
     position: fixed;
-    bottom: 0px;
-    margin-right: auto;
-    margin-left: auto;
+    bottom: 15px;
+    left: 50%;
+    transform: translateX(-50%);
     width: 300px; 
 }
 
 .position_bl{
     position: fixed;
-    bottom: 0px;
-    left: 0px;
+    bottom: 15px;
+    left: 15px;
     width: 300px; 
 }
 
+.type_common{
+    font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
+    padding: .2em .6em .3em;
+    font-size: 75%;
+    font-weight: 700;
+    line-height: 1;
+    color: #fff;
+    text-align: center;
+    white-space: nowrap;
+    vertical-align: baseline;
+    border-radius: .25em;
+}
+
+.type_default{
+    background-color: #777;
+}
+
+.type_primary{
+    background-color: #337ab7;
+
+}
+
+.type_success{
+    background-color: #5cb85c;
+}
+
+.type_info{
+    background-color: #5bc0de;
+}
+
+.type_warning{
+    background-color: #f0ad4e;
+}
+
+.type_danger{
+    background-color: #d9534f;
+}
 
 .boja_ok{
     border: 3px solid rgb(0,100,0);
