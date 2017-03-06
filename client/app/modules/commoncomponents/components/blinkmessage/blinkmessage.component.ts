@@ -19,8 +19,25 @@ export class BlinkMessageComponent implements OnInit{
 
     private intervalCounter: number = 0;
 
-    @Input() type: string = "primary";
-    @Input() position: string ="tm";
+    private _type: string = "primary";
+    @Input("type")
+    set type(value: string){
+        this._type= value;
+        this.setType();
+    }
+    private _position: string = "tm";
+    @Input("position")
+    set position(value: string){
+        this._position= value;
+        this.setPosition();
+    }
+    private _maxwidth: string = "300px";
+    @Input("maxwidth")
+    set maxwidth(value: string){
+        this._maxwidth= value;
+    }
+
+    @Input() neki_broj: number = 20;
 
     private type_default: boolean = false;
     private type_primary: boolean = false;
@@ -44,7 +61,7 @@ export class BlinkMessageComponent implements OnInit{
     ngOnInit(){
         this._title="PopUp Component";
         this.setType();
-        this.setPostion();
+        this.setPosition();
     }    
 
     private setType(): void{
@@ -83,7 +100,7 @@ export class BlinkMessageComponent implements OnInit{
         console.log("Type primary : "+this.type_primary);
     }
 
-    private setPostion(): void{
+    private setPosition(): void{
         switch(this.position){
             case "tr":{
                 this.position_tr = true;

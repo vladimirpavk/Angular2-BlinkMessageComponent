@@ -2,7 +2,8 @@
   <ng-content></ng-content>  
 </div> -->
 
-<div [class.show]="!isShown"
+<div [style.max-width.px]="maxwidth"
+     [class.show]="!isShown"
      class="hide type_common"
      [class.type_default]="type_default"
      [class.type_primary]="type_primary"

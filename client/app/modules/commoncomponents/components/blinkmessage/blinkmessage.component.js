@@ -25,8 +25,10 @@ System.register(["@angular/core"], function (exports_1, context_1) {
                     this.ok = false;
                     this.isShown = true;
                     this.intervalCounter = 0;
-                    this.type = "primary";
-                    this.position = "tm";
+                    this._type = "primary";
+                    this._position = "tm";
+                    this._maxwidth = "300px";
+                    this.neki_broj = 20;
                     this.type_default = false;
                     this.type_primary = false;
                     this.type_success = false;
@@ -43,10 +45,21 @@ System.register(["@angular/core"], function (exports_1, context_1) {
                     this.position_bm = false;
                     this.position_bl = false;
                 }
+                set type(value) {
+                    this._type = value;
+                    this.setType();
+                }
+                set position(value) {
+                    this._position = value;
+                    this.setPosition();
+                }
+                set maxwidth(value) {
+                    this._maxwidth = value;
+                }
                 ngOnInit() {
                     this._title = "PopUp Component";
                     this.setType();
-                    this.setPostion();
+                    this.setPosition();
                 }
                 setType() {
                     switch (this.type) {
@@ -88,7 +101,7 @@ System.register(["@angular/core"], function (exports_1, context_1) {
                     }
                     console.log("Type primary : " + this.type_primary);
                 }
-                setPostion() {
+                setPosition() {
                     switch (this.position) {
                         case "tr":
                             {
@@ -182,13 +195,24 @@ System.register(["@angular/core"], function (exports_1, context_1) {
                 __metadata("design:type", Boolean)
             ], BlinkMessageComponent.prototype, "ok", void 0);
             __decorate([
-                core_1.Input(),
-                __metadata("design:type", String)
-            ], BlinkMessageComponent.prototype, "type", void 0);
+                core_1.Input("type"),
+                __metadata("design:type", String),
+                __metadata("design:paramtypes", [String])
+            ], BlinkMessageComponent.prototype, "type", null);
+            __decorate([
+                core_1.Input("position"),
+                __metadata("design:type", String),
+                __metadata("design:paramtypes", [String])
+            ], BlinkMessageComponent.prototype, "position", null);
+            __decorate([
+                core_1.Input("maxwidth"),
+                __metadata("design:type", String),
+                __metadata("design:paramtypes", [String])
+            ], BlinkMessageComponent.prototype, "maxwidth", null);
             __decorate([
                 core_1.Input(),
-                __metadata("design:type", String)
-            ], BlinkMessageComponent.prototype, "position", void 0);
+                __metadata("design:type", Number)
+            ], BlinkMessageComponent.prototype, "neki_broj", void 0);
             BlinkMessageComponent = __decorate([
                 core_1.Component({
                     moduleId: __moduleName,
