@@ -4,17 +4,16 @@ let __moduleName: any;
 
 @Component({
     moduleId: __moduleName,
-    selector: 'blink-message',    
-    templateUrl: 'blinkmessage.component.html',
-    styleUrls: ['blinkmessage.component.css']
+    selector: 'flash-box',    
+    templateUrl: 'flashbox.component.html',
+    styleUrls: ['flashbox.component.css']
 })
-export class BlinkMessageComponent implements OnInit{
+export class FlashBoxComponent implements OnInit{
 
     private _setTimeout: number = 2000;    
     @Input("setTimeout")
     set setTimeout(value : number){
-        this._setTimeout= value;
-        console.log(this._setTimeout);
+        this._setTimeout= value;      
     }
 
     @Input() popUpText: string = "All of these elements will be faded out using a CSS3 opacity transition.";

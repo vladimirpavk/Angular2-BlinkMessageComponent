@@ -1,4 +1,4 @@
-System.register(["@angular/core", "@angular/platform-browser", "./components/blinkmessage/blinkmessage.component"], function (exports_1, context_1) {
+System.register(["@angular/core", "@angular/platform-browser", "./components/flashbox/flashbox.component"], function (exports_1, context_1) {
     "use strict";
     var __decorate = (this && this.__decorate) || function (decorators, target, key, desc) {
         var c = arguments.length, r = c < 3 ? target : desc === null ? desc = Object.getOwnPropertyDescriptor(target, key) : desc, d;
@@ -7,7 +7,7 @@ System.register(["@angular/core", "@angular/platform-browser", "./components/bli
         return c > 3 && r && Object.defineProperty(target, key, r), r;
     };
     var __moduleName = context_1 && context_1.id;
-    var core_1, platform_browser_1, blinkmessage_component_1, CommonComponentsModule;
+    var core_1, platform_browser_1, flashbox_component_1, CommonComponentsModule;
     return {
         setters: [
             function (core_1_1) {
@@ -16,8 +16,8 @@ System.register(["@angular/core", "@angular/platform-browser", "./components/bli
             function (platform_browser_1_1) {
                 platform_browser_1 = platform_browser_1_1;
             },
-            function (blinkmessage_component_1_1) {
-                blinkmessage_component_1 = blinkmessage_component_1_1;
+            function (flashbox_component_1_1) {
+                flashbox_component_1 = flashbox_component_1_1;
             }
         ],
         execute: function () {
@@ -26,8 +26,8 @@ System.register(["@angular/core", "@angular/platform-browser", "./components/bli
             CommonComponentsModule = __decorate([
                 core_1.NgModule({
                     imports: [platform_browser_1.BrowserModule],
-                    declarations: [blinkmessage_component_1.BlinkMessageComponent],
-                    exports: [platform_browser_1.BrowserModule, blinkmessage_component_1.BlinkMessageComponent]
+                    declarations: [flashbox_component_1.FlashBoxComponent],
+                    exports: [platform_browser_1.BrowserModule, flashbox_component_1.FlashBoxComponent]
                 })
             ], CommonComponentsModule);
             exports_1("CommonComponentsModule", CommonComponentsModule);
