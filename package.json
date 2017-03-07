@@ -1,7 +1,7 @@
 {
-  "name": "angular2-flashcomponent",
-  "version": "0.0.0",
-  "description": "Angular2 Flash Component",
+  "name": "angular2-flashboxcomponent",
+  "version": "0.1",
+  "description": "Angular2 FlashBox Component",
   "main": "server_app.js",
   "dependencies": {
     "@angular/common": "^2.4.5",
@@ -41,12 +41,23 @@
     "Express",
     "Gulp",
     "Angular",
-    "Angular2"
+    "Angular2",
+    "Flash Box",
+    "FlashBox",
+    "Blink",
+    "Blink Box",
+    "Message",
+    "Flashing",
+    "Blinking",
+    "Popup",
+    "Message",
+    "Box",
+    "Dialog"
   ],
   "author": "Vladimir Pavkovic",
-  "license": "ISC",
+  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git://github.com/vladimirpavk/Angular2-Skeleton.git"
+    "url": "git://github.com/vladimirpavk/Angular2-FlashBoxComponent.git"
   }
 }
