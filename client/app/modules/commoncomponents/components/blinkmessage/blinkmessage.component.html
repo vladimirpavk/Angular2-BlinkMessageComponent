@@ -2,7 +2,7 @@
   <ng-content></ng-content>  
 </div> -->
 
-<div [style.max-width.px]="maxwidth"
+<div 
      [class.show]="!isShown"
      class="hide type_common"
      [class.type_default]="type_default"
@@ -20,6 +20,7 @@
      [class.position_br]="position_br"
      [class.position_bm]="position_bm"
      [class.position_bl]="position_bl"
+     [class.style.max-width.px]="maxwidth"
 >
   <ng-content></ng-content>
 </div>

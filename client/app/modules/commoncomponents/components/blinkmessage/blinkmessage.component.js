@@ -20,7 +20,7 @@ System.register(["@angular/core"], function (exports_1, context_1) {
         execute: function () {
             BlinkMessageComponent = class BlinkMessageComponent {
                 constructor() {
-                    this.setTimeout = 2000;
+                    this._setTimeout = 2000;
                     this.popUpText = "All of these elements will be faded out using a CSS3 opacity transition.";
                     this.ok = false;
                     this.isShown = true;
@@ -28,7 +28,6 @@ System.register(["@angular/core"], function (exports_1, context_1) {
                     this._type = "primary";
                     this._position = "tm";
                     this._maxwidth = "300px";
-                    this.neki_broj = 20;
                     this.type_default = false;
                     this.type_primary = false;
                     this.type_success = false;
@@ -44,6 +43,10 @@ System.register(["@angular/core"], function (exports_1, context_1) {
                     this.position_br = false;
                     this.position_bm = false;
                     this.position_bl = false;
+                }
+                set setTimeout(value) {
+                    this._setTimeout = value;
+                    console.log(this._setTimeout);
                 }
                 set type(value) {
                     this._type = value;
@@ -62,7 +65,7 @@ System.register(["@angular/core"], function (exports_1, context_1) {
                     this.setPosition();
                 }
                 setType() {
-                    switch (this.type) {
+                    switch (this._type) {
                         case "default":
                             {
                                 this.type_default = true;
@@ -99,10 +102,9 @@ System.register(["@angular/core"], function (exports_1, context_1) {
                                 break;
                             }
                     }
-                    console.log("Type primary : " + this.type_primary);
                 }
                 setPosition() {
-                    switch (this.position) {
+                    switch (this._position) {
                         case "tr":
                             {
                                 this.position_tr = true;
@@ -158,13 +160,12 @@ System.register(["@angular/core"], function (exports_1, context_1) {
                             }
                             ;
                     }
-                    console.log("This position : " + this.position_tr);
                 }
                 blinkOnce() {
                     this.isShown = !this.isShown;
                     setTimeout(() => {
                         this.isShown = !this.isShown;
-                    }, this.setTimeout);
+                    }, this._setTimeout);
                 }
                 startBlinking() {
                     //if already blinking do nothing
@@ -173,19 +174,23 @@ System.register(["@angular/core"], function (exports_1, context_1) {
                     this.isShown = !this.isShown;
                     this.intervalCounter = setInterval(() => {
                         this.isShown = !this.isShown;
-                    }, this.setTimeout);
+                    }, this._setTimeout);
                 }
                 stopBlinking() {
                     if (this.intervalCounter != 0) {
                         clearInterval(this.intervalCounter);
                         this.intervalCounter = 0;
+                        //check if left in state visible
+                        if (!this.isShown)
+                            this.isShown = true;
                     }
                 }
             };
             __decorate([
-                core_1.Input(),
-                __metadata("design:type", Number)
-            ], BlinkMessageComponent.prototype, "setTimeout", void 0);
+                core_1.Input("setTimeout"),
+                __metadata("design:type", Number),
+                __metadata("design:paramtypes", [Number])
+            ], BlinkMessageComponent.prototype, "setTimeout", null);
             __decorate([
                 core_1.Input(),
                 __metadata("design:type", String)
@@ -209,10 +214,6 @@ System.register(["@angular/core"], function (exports_1, context_1) {
                 __metadata("design:type", String),
                 __metadata("design:paramtypes", [String])
             ], BlinkMessageComponent.prototype, "maxwidth", null);
-            __decorate([
-                core_1.Input(),
-                __metadata("design:type", Number)
-            ], BlinkMessageComponent.prototype, "neki_broj", void 0);
             BlinkMessageComponent = __decorate([
                 core_1.Component({
                     moduleId: __moduleName,

@@ -18,22 +18,19 @@ transition: .5s ease-in-out all;
     position: fixed;
     top: 15px;
     right: 15px;
-    max-width: 300px; 
 }
 
 .position_tm{
     position: fixed;
     left: 50%;
     transform: translateX(-50%);
-    top: 15px;  
-    max-width: 300px;   
+    top: 15px;    
 }
 
 .position_tl{
     position: fixed;
     top: 15px;
     left: 15px;
-    max-width: 300px; 
 }
 
 .position_cr{
@@ -41,7 +38,6 @@ transition: .5s ease-in-out all;
     top: 50%;
     transform: translateY(-50%);
     right: 15px;
-    max-width: 300px; 
 }
 
 .position_cm{
@@ -57,14 +53,12 @@ transition: .5s ease-in-out all;
     top: 50%;
     transform: translateY(-50%);
     left: 15px;
-    max-width: 300px; 
 }
 
 .position_br{
     position: fixed;
     bottom: 15px;
     right: 15px;
-    max-width: 300px; 
 }
 
 .position_bm{
@@ -72,26 +66,21 @@ transition: .5s ease-in-out all;
     bottom: 15px;
     left: 50%;
     transform: translateX(-50%);
-    max-width: 300px; 
 }
 
 .position_bl{
     position: fixed;
     bottom: 15px;
     left: 15px;
-    max-width: 300px; 
 }
 
 .type_common{
     font-family: "Helvetica Neue",Helvetica,Arial,sans-serif;
     /*padding: .2em .6em .3em;*/
-    padding-left:0px;
-    padding-right: 0px;
-    padding-top: 0px;
-    padding-bottom: 0px;
-    border-style: solid;
-    border-max-width: 10px;
-    border-color: rgb(125,125,125);
+    padding-left:5px;
+    padding-right: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
     font-size: 75%;
     font-weight: 700;
     line-height: 1;

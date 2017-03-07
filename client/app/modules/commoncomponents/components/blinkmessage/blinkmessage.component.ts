@@ -10,7 +10,13 @@ let __moduleName: any;
 })
 export class BlinkMessageComponent implements OnInit{
 
-    @Input() setTimeout: number= 2000;
+    private _setTimeout: number = 2000;    
+    @Input("setTimeout")
+    set setTimeout(value : number){
+        this._setTimeout= value;
+        console.log(this._setTimeout);
+    }
+
     @Input() popUpText: string = "All of these elements will be faded out using a CSS3 opacity transition.";
     @Input() ok: boolean = false;
     
@@ -25,19 +31,19 @@ export class BlinkMessageComponent implements OnInit{
         this._type= value;
         this.setType();
     }
+    
     private _position: string = "tm";
     @Input("position")
     set position(value: string){
         this._position= value;
         this.setPosition();
     }
+    
     private _maxwidth: string = "300px";
     @Input("maxwidth")
     set maxwidth(value: string){
         this._maxwidth= value;
     }
-
-    @Input() neki_broj: number = 20;
 
     private type_default: boolean = false;
     private type_primary: boolean = false;
@@ -65,7 +71,7 @@ export class BlinkMessageComponent implements OnInit{
     }    
 
     private setType(): void{
-        switch(this.type){
+        switch(this._type){
             case "default":
             {
                 this.type_default = true;
@@ -97,11 +103,10 @@ export class BlinkMessageComponent implements OnInit{
                 break;
             }
         }
-        console.log("Type primary : "+this.type_primary);
     }
 
     private setPosition(): void{
-        switch(this.position){
+        switch(this._position){
             case "tr":{
                 this.position_tr = true;
                 break;
@@ -139,7 +144,6 @@ export class BlinkMessageComponent implements OnInit{
                 break;
             };
         }
-        console.log("This position : "+this.position_tr);
     }
 
     public blinkOnce(): void{        
@@ -147,7 +151,7 @@ export class BlinkMessageComponent implements OnInit{
 
         setTimeout(()=> {            
             this.isShown=!this.isShown;        
-        }, this.setTimeout);
+        }, this._setTimeout);
     }
 
     public startBlinking(): void{
@@ -158,13 +162,15 @@ export class BlinkMessageComponent implements OnInit{
 
         this.intervalCounter=setInterval(()=> {            
             this.isShown=!this.isShown;        
-        }, this.setTimeout);
+        }, this._setTimeout);
     }
 
     public stopBlinking(){
         if(this.intervalCounter != 0){
             clearInterval(this.intervalCounter);
             this.intervalCounter=0;
+            //check if left in state visible
+            if(!this.isShown) this.isShown=true;
         }
     }
 
