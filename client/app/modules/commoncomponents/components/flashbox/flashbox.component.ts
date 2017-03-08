@@ -145,7 +145,7 @@ export class FlashBoxComponent implements OnInit{
         }
     }
 
-    public blinkOnce(): void{        
+    public flashOnce(): void{        
         this.isShown=!this.isShown;
 
         setTimeout(()=> {            
@@ -153,7 +153,15 @@ export class FlashBoxComponent implements OnInit{
         }, this._setTimeout);
     }
 
-    public startBlinking(): void{
+    public show(): void{
+        this.isShown=false;
+    }
+
+    public hide(): void{
+         this.isShown=true;
+    }
+
+    public startFlashing(): void{
         //if already blinking do nothing
         if(this.intervalCounter!=0) return;
 
@@ -164,7 +172,7 @@ export class FlashBoxComponent implements OnInit{
         }, this._setTimeout);
     }
 
-    public stopBlinking(){
+    public stopFlashing(){
         if(this.intervalCounter != 0){
             clearInterval(this.intervalCounter);
             this.intervalCounter=0;

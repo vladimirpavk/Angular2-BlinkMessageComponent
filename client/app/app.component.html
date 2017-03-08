@@ -1,4 +1,34 @@
-<h1>Proxba</h1>
+<h1 style="text-decoration: underline">FlashBox Component demo application</h1>
+
+<h2>Select FlashBox position: </h2>
+<form>
+    <input type="radio" name="position">Top right<br>
+    <input type="radio" name="position">Top middle<br>
+    <input type="radio" name="position">Top left<br>
+    <br>
+    <input type="radio" name="position">Center right<br>
+    <input type="radio" name="position">Center middle<br>
+    <input type="radio" name="position">Center left<br>
+    <br>
+    <input type="radio" name="position">Bottom right<br>
+    <input type="radio" name="position">Bottom middle<br>
+    <input type="radio" name="position">Bottom left<br>
+    <br>
+    <h2>Select FlashBox action:</h2>
+    <button>Show</button>
+    <button>Hide</button>
+    <br>
+    <button>Start flashing</button>
+    <button>Stop flashing</button>
+    <button>Flash once</button>
+    <br>
+</form>
+
+
+
+
+
+
 <flash-box type="primary" position="bm" max-width="300px" setTimeout=2000 #bm1>
    <div style="border-type: solid; border-width:2px">
        <label style="color: rgb(0,0,0); text-decoration: underline;">Information message</label>
@@ -8,5 +38,5 @@
    </label>
 </flash-box>
 
-<button (click)="bm1.startBlinking()">Pritisni me</button>
-<button (click)="bm1.stopBlinking()">Zaustavi me</button>
+<button (click)="bm1.show()">Pritisni me</button>
+<button (click)="bm1.hide()">Zaustavi me</button>
