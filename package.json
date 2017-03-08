@@ -1,8 +1,11 @@
 {
-  "name": "angular2-flashboxcomponent",
-  "version": "0.1",
+  "name": "angular2-flashboxcomponent", 
   "description": "Angular2 FlashBox Component",
+  "version": "0.0.0",
   "main": "server_app.js",
+  "scripts":{
+    "start" : "gulp"
+  },
   "dependencies": {
     "@angular/common": "^2.4.5",
     "@angular/compiler": "^2.4.5",
@@ -42,7 +45,7 @@
     "Gulp",
     "Angular",
     "Angular2",
-    "Flash Box",
+    "Flash",
     "FlashBox",
     "Blink",
     "Blink Box",
