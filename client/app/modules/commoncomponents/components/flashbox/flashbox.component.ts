@@ -9,19 +9,9 @@ let __moduleName: any;
     styleUrls: ['flashbox.component.css']
 })
 export class FlashBoxComponent implements OnInit{
-
-    private _setTimeout: number = 2000;    
-    @Input("setTimeout")
-    set setTimeout(value : number){
-        this._setTimeout= value;      
-    }
-
-    @Input() popUpText: string = "All of these elements will be faded out using a CSS3 opacity transition.";
-    @Input() ok: boolean = false;
-    
-    private _title:string;
+   
     private isShown: boolean = true;
-
+    //counter handler
     private intervalCounter: number = 0;
 
     private _type: string = "primary";
@@ -42,6 +32,12 @@ export class FlashBoxComponent implements OnInit{
     @Input("maxwidth")
     set maxwidth(value: string){
         this._maxwidth= value;
+    }
+    
+    private _setTimeout: number = 2000;    
+    @Input("setTimeout")
+    set setTimeout(value : number){
+        this._setTimeout= value;      
     }
 
     private type_default: boolean = false;

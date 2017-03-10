@@ -1,18 +1,18 @@
 <h1 style="text-decoration: underline">FlashBox Component demo application</h1>
 
 <h2>Select FlashBox position: </h2>
-<form>
-    <input type="radio" name="position">Top right<br>
-    <input type="radio" name="position">Top middle<br>
-    <input type="radio" name="position">Top left<br>
+
+    <input type="radio" name="position" value="tr" #tr_radio (click)="radioButtonClicked(tr_radio.value)">Top right<br>
+    <input type="radio" name="position" value="tm" #tm_radio (click)="radioButtonClicked(tm_radio.value)">Top middle<br>
+    <input type="radio" name="position" value="tl" #tl_radio (click)="radioButtonClicked(tl_radio.value)">Top left<br>
     <br>
-    <input type="radio" name="position">Center right<br>
-    <input type="radio" name="position">Center middle<br>
-    <input type="radio" name="position">Center left<br>
+    <input type="radio" name="position" value="cr" #cr_radio (click)="radioButtonClicked(cr_radio.value)">Center right<br>
+    <input type="radio" name="position" value="cm" #cm_radio (click)="radioButtonClicked(cm_radio.value)">Center middle<br>
+    <input type="radio" name="position" value="cl" #cl_radio (click)="radioButtonClicked(cl_radio.value)">Center left<br>
     <br>
-    <input type="radio" name="position">Bottom right<br>
-    <input type="radio" name="position">Bottom middle<br>
-    <input type="radio" name="position">Bottom left<br>
+    <input type="radio" name="position" value="br" #br_radio (click)="radioButtonClicked(br_radio.value)">Bottom right<br>
+    <input type="radio" name="position" value="bm" #bm_radio (click)="radioButtonClicked(bm_radio.value)">Bottom middle<br>
+    <input type="radio" name="position" value="bl" #bl_radio (click)="radioButtonClicked(bl_radio.value)">Bottom left<br>
     <br>
     <h2>Select FlashBox action:</h2>
     <button>Show</button>
@@ -22,7 +22,7 @@
     <button>Stop flashing</button>
     <button>Flash once</button>
     <br>
-</form>
+
 
 
 
