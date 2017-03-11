@@ -1,35 +1,71 @@
 <h1 style="text-decoration: underline">FlashBox Component demo application</h1>
 
+<!--
 <h2>Select FlashBox position: </h2>
 
-    <input type="radio" name="position" value="tr" #tr_radio (click)="radioButtonClicked(tr_radio.value)">Top right<br>
-    <input type="radio" name="position" value="tm" #tm_radio (click)="radioButtonClicked(tm_radio.value)">Top middle<br>
-    <input type="radio" name="position" value="tl" #tl_radio (click)="radioButtonClicked(tl_radio.value)">Top left<br>
+    <input type="radio" name="position" value="tr" #tr_radio (click)="radioButtonPosition(tr_radio.value)">Top right<br>
+    <input type="radio" name="position" value="tm" #tm_radio (click)="radioButtonPosition(tm_radio.value)">Top middle<br>
+    <input type="radio" name="position" value="tl" #tl_radio (click)="radioButtonPosition(tl_radio.value)">Top left<br>
     <br>
-    <input type="radio" name="position" value="cr" #cr_radio (click)="radioButtonClicked(cr_radio.value)">Center right<br>
-    <input type="radio" name="position" value="cm" #cm_radio (click)="radioButtonClicked(cm_radio.value)">Center middle<br>
-    <input type="radio" name="position" value="cl" #cl_radio (click)="radioButtonClicked(cl_radio.value)">Center left<br>
+    <input type="radio" name="position" value="cr" #cr_radio (click)="radioButtonPosition(cr_radio.value)">Center right<br>
+    <input type="radio" name="position" value="cm" #cm_radio (click)="radioButtonPosition(cm_radio.value)">Center middle<br>
+    <input type="radio" name="position" value="cl" #cl_radio (click)="radioButtonPosition(cl_radio.value)">Center left<br>
     <br>
-    <input type="radio" name="position" value="br" #br_radio (click)="radioButtonClicked(br_radio.value)">Bottom right<br>
-    <input type="radio" name="position" value="bm" #bm_radio (click)="radioButtonClicked(bm_radio.value)">Bottom middle<br>
-    <input type="radio" name="position" value="bl" #bl_radio (click)="radioButtonClicked(bl_radio.value)">Bottom left<br>
-    <br>
-    <h2>Select FlashBox action:</h2>
-    <button>Show</button>
-    <button>Hide</button>
-    <br>
-    <button>Start flashing</button>
-    <button>Stop flashing</button>
-    <button>Flash once</button>
+    <input type="radio" name="position" value="br" #br_radio (click)="radioButtonPosition(br_radio.value)">Bottom right<br>
+    <input type="radio" name="position" value="bm" #bm_radio (click)="radioButtonPosition(bm_radio.value)">Bottom middle<br>
+    <input type="radio" name="position" value="bl" #bl_radio (click)="radioButtonPosition(bl_radio.value)">Bottom left<br>
     <br>
 
+<h2>Select FlashBox type: </h2>
 
+<input type="radio" value="default" #default_radio (click)="radioButtonTypeClicked(default_radio.value)">Default<br>
+<input type="radio" value="primary" #primary_radio (click)="radioButtonTypeClicked(primary_radio.value)">Primary<br>
+<input type="radio" value="success" #success_radio (click)="radioButtonTypeClicked(success_radio.value)">Success<br>
+<input type="radio" value="info" #info_radio (click)="radioButtonTypeClicked(info_radio.value)">Info<br>
+<input type="radio" value="warning" #warning_radio (click)="radioButtonTypeClicked(warning_radio.value)">Warning<br>
+<input type="radio" value="danger" #danger_radio (click)="radioButtonTypeClicked(danger_radio.value)">Danger<br> -->
 
+<h2>Select FlashBox position: </h2>
+<select #select_position>
+    <option value="tr">Top right</option>
+    <option value="tm">Top middle</option>
+    <option value="tl">Top left</option>
+    <option value="cr">Center right</option>
+    <option value="cm">Center middle</option>
+    <option value="cl">Center left</option>
+    <option value="br">Bottom right</option>
+    <option value="bm">Bottom middle</option>
+    <option value="bl">Bottom right</option>
+</select>
+<h2>Select FlashBox type: </h2>
+<select #select_type>
+    <option value="default">Default</option>
+    <option value="primary">Primary</option>
+    <option value="success">Success</option>
+    <option value="info">Info</option>
+    <option value="warning">Warning</option>
+    <option valur="danger">Danger</option>
+</select>
 
+<h2>Select FlashBox action:</h2>
+<button (click)="bm1.show()">Show</button>
+<button (click)="bm1.hide()">Hide</button>
+<br>
+<button (click)="bm1.startFlashing()">Start flashing</button>
+<button (click)="bm1.stopFlashing()">Stop flashing</button>
+<button (click)="bm1.flashOnce()">Flash once</button>
+<br>
 
+<!--<flash-box type="primary" position="bm" max-width="300px" setTimeout=2000 #bm1>
+   <div style="border-type: solid; border-width:2px">
+       <label style="color: rgb(0,0,0); text-decoration: underline;">Information message</label>
+   </div>
+   <label>
+       User successfully deleted...
+   </label>
+</flash-box> -->
 
-
-<flash-box type="primary" position="bm" max-width="300px" setTimeout=2000 #bm1>
+<flash-box [type]="select_type" [position]="select_position" max-width="300px" setTimeout=2000 #bm1>
    <div style="border-type: solid; border-width:2px">
        <label style="color: rgb(0,0,0); text-decoration: underline;">Information message</label>
    </div>
@@ -37,6 +73,3 @@
        User successfully deleted...
    </label>
 </flash-box>
-
-<button (click)="bm1.show()">Pritisni me</button>
-<button (click)="bm1.hide()">Zaustavi me</button>

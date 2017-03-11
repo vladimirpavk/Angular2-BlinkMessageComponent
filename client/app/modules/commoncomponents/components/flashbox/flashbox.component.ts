@@ -60,7 +60,6 @@ export class FlashBoxComponent implements OnInit{
     constructor(){}
 
     ngOnInit(){
-        this._title="PopUp Component";
         this.setType();
         this.setPosition();
     }    

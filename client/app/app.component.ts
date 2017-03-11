@@ -10,7 +10,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-    private radioButtonClicked(value: string){
+    private radioButtonPositionClicked(value: string){
+      console.log(value);
+    }
+
+    private radioButtonTypeClicked(value: string){
+      console.log(value);
+    }
+
+    private readSelect(value: any){
       console.log(value);
     }
 
