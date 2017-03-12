@@ -25,27 +25,32 @@
 <input type="radio" value="warning" #warning_radio (click)="radioButtonTypeClicked(warning_radio.value)">Warning<br>
 <input type="radio" value="danger" #danger_radio (click)="radioButtonTypeClicked(danger_radio.value)">Danger<br> -->
 
-<h2>Select FlashBox position: </h2>
-<select #select_position>
-    <option value="tr">Top right</option>
-    <option value="tm">Top middle</option>
-    <option value="tl">Top left</option>
-    <option value="cr">Center right</option>
-    <option value="cm">Center middle</option>
-    <option value="cl">Center left</option>
-    <option value="br">Bottom right</option>
-    <option value="bm">Bottom middle</option>
-    <option value="bl">Bottom right</option>
-</select>
-<h2>Select FlashBox type: </h2>
-<select #select_type>
-    <option value="default">Default</option>
-    <option value="primary">Primary</option>
-    <option value="success">Success</option>
-    <option value="info">Info</option>
-    <option value="warning">Warning</option>
-    <option valur="danger">Danger</option>
-</select>
+<div class="form-group">
+
+    <label for="sel1">Select FlashBox position: </label>
+    <select class="form-control" #select_position id="sel1" style="width: 200px">
+        <option value="tr">Top right</option>
+        <option value="tm">Top middle</option>
+        <option value="tl">Top left</option>
+        <option value="cr">Center right</option>
+        <option value="cm">Center middle</option>
+        <option value="cl">Center left</option>
+        <option value="br">Bottom right</option>
+        <option value="bm">Bottom middle</option>
+        <option value="bl">Bottom right</option>
+    </select>
+
+    <label for="sel2">Select FlashBox type: </label>
+    <select class="form-control" #select_type id="sel2" style="width: 200px">
+        <option value="default">Default</option>
+        <option value="primary">Primary</option>
+        <option value="success">Success</option>
+        <option value="info">Info</option>
+        <option value="warning">Warning</option>
+        <option value="danger">Danger</option>
+    </select>
+
+</div>
 
 <h2>Select FlashBox action:</h2>
 <button (click)="bm1.show()">Show</button>

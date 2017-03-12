@@ -47,6 +47,8 @@ export class FlashBoxComponent implements OnInit{
     private type_warning: boolean = false;
     private type_danger: boolean = false;
 
+    private style_type: boolean[] = [false, false, false, false, false, false];
+
     private position_tr: boolean = false;
     private position_tm: boolean = false;
     private position_tl: boolean = false;
@@ -56,6 +58,8 @@ export class FlashBoxComponent implements OnInit{
     private position_br: boolean = false;
     private position_bm: boolean = false;
     private position_bl: boolean = false;
+
+    private style_position: boolean[] = [false, false, false, false, false, false, false, false, false];
 
     constructor(){}
 
@@ -68,32 +72,38 @@ export class FlashBoxComponent implements OnInit{
         switch(this._type){
             case "default":
             {
-                this.type_default = true;
+                //this.type_default = true;
+                this.style_type= [true, false, false, false, false, false];
                 break;
             };
             case "primary":
             {
-                this.type_primary = true;
+                this.style_type= [false, true, false, false, false, false];
+                //this.type_primary = true;
                 break;
             };
             case "success":
             {
-                this.type_success = true;
+                this.style_type= [false, false, true, false, false, false];
+                //this.type_success = true;
                 break;
             };
             case "info":
             {
-                this.type_info = true;
+                this.style_type= [false, false, false, true, false, false];
+                //this.type_info = true;
                 break;
             };
             case "warning":
             {
-                this.type_warning = true;
+                this.style_type= [false, false, false, false, true, false];
+                //this.type_warning = true;
                 break;                
             };
             case "danger":
             {
-                this.type_danger = true;
+                this.style_type= [false, false, false, false, false, true];
+                //this.type_danger = true;
                 break;
             }
         }
@@ -102,39 +112,48 @@ export class FlashBoxComponent implements OnInit{
     private setPosition(): void{
         switch(this._position){
             case "tr":{
-                this.position_tr = true;
+                this.style_position= [true, false, false, false, false, false, false, false, false];
+                //this.position_tr = true;
                 break;
             };
             case "tm":{
-                this.position_tm = true;
+                this.style_position= [false, true, false, false, false, false, false, false, false];               
+                //this.position_tm = true;
                 break;
             };
             case "tl":{
-                this.position_tl = true;
+                this.style_position= [false, false, true, false, false, false, false, false, false];  
+               // this.position_tl = true;
                 break;
             };
             case "cr":{
-                this.position_cr = true;
+                this.style_position= [false, false, false, true, false, false, false, false, false];  
+                //this.position_cr = true;
                 break;
             };
             case "cm":{
-                this.position_cm = true;
+                 this.style_position= [false, false, false, false, true, false, false, false, false];  
+                //this.position_cm = true;
                 break;
             };
             case "cl":{
-                this.position_cl = true;
+                this.style_position= [false, false, false, false, false, true, false, false, false];  
+                //this.position_cl = true;
                 break;
             };
             case "br":{
-                this.position_br = true;
+                this.style_position= [false, false, false, false, false, false, true, false, false];  
+                //this.position_br = true;
                 break;
             };
             case "bm":{
-                this.position_bm = true;
+                this.style_position= [false, false, false, false, false, false, false, true, false];  
+                //this.position_bm = true;
                 break;
             };
             case "bl":{
-                this.position_bl = true;
+                this.style_position= [false, false, false, false, false, false, false, false, true];  
+               // this.position_bl = true;
                 break;
             };
         }

@@ -1,10 +1,10 @@
 {
-  "name": "angular2-flashboxcomponent", 
+  "name": "angular2-flashboxcomponent",
   "description": "Angular2 FlashBox Component",
   "version": "0.0.0",
   "main": "server_app.js",
-  "scripts":{
-    "start" : "gulp"
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "dependencies": {
     "@angular/common": "^2.4.5",
@@ -31,12 +31,10 @@
     "gulp-nodemon": "^2.2.1",
     "gulp-sourcemaps": "^2.4.0",
     "gulp-typescript": "^3.1.4",
+    "jquery": "^3.1.1",
     "path": "^0.12.7",
     "typescript": "^2.1.5",
     "typings": "^2.1.0"
-  },
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
     "Node",
