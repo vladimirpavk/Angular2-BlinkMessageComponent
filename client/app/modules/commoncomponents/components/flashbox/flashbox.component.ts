@@ -40,24 +40,7 @@ export class FlashBoxComponent implements OnInit{
         this._setTimeout= value;      
     }
 
-    private type_default: boolean = false;
-    private type_primary: boolean = false;
-    private type_success: boolean = false;
-    private type_info: boolean = false;
-    private type_warning: boolean = false;
-    private type_danger: boolean = false;
-
     private style_type: boolean[] = [false, false, false, false, false, false];
-
-    private position_tr: boolean = false;
-    private position_tm: boolean = false;
-    private position_tl: boolean = false;
-    private position_cr: boolean = false;
-    private position_cm: boolean = false;
-    private position_cl: boolean = false;
-    private position_br: boolean = false;
-    private position_bm: boolean = false;
-    private position_bl: boolean = false;
 
     private style_position: boolean[] = [false, false, false, false, false, false, false, false, false];
 
@@ -71,39 +54,33 @@ export class FlashBoxComponent implements OnInit{
     private setType(): void{
         switch(this._type){
             case "default":
-            {
-                //this.type_default = true;
+            {            
                 this.style_type= [true, false, false, false, false, false];
                 break;
             };
             case "primary":
             {
-                this.style_type= [false, true, false, false, false, false];
-                //this.type_primary = true;
+                this.style_type= [false, true, false, false, false, false];                
                 break;
             };
             case "success":
             {
-                this.style_type= [false, false, true, false, false, false];
-                //this.type_success = true;
+                this.style_type= [false, false, true, false, false, false];                
                 break;
             };
             case "info":
             {
-                this.style_type= [false, false, false, true, false, false];
-                //this.type_info = true;
+                this.style_type= [false, false, false, true, false, false];                
                 break;
             };
             case "warning":
             {
-                this.style_type= [false, false, false, false, true, false];
-                //this.type_warning = true;
+                this.style_type= [false, false, false, false, true, false];               
                 break;                
             };
             case "danger":
             {
-                this.style_type= [false, false, false, false, false, true];
-                //this.type_danger = true;
+                this.style_type= [false, false, false, false, false, true];               
                 break;
             }
         }
@@ -112,48 +89,39 @@ export class FlashBoxComponent implements OnInit{
     private setPosition(): void{
         switch(this._position){
             case "tr":{
-                this.style_position= [true, false, false, false, false, false, false, false, false];
-                //this.position_tr = true;
+                this.style_position= [true, false, false, false, false, false, false, false, false];               
                 break;
             };
             case "tm":{
-                this.style_position= [false, true, false, false, false, false, false, false, false];               
-                //this.position_tm = true;
+                this.style_position= [false, true, false, false, false, false, false, false, false];                             
                 break;
             };
             case "tl":{
-                this.style_position= [false, false, true, false, false, false, false, false, false];  
-               // this.position_tl = true;
+                this.style_position= [false, false, true, false, false, false, false, false, false];                
                 break;
             };
             case "cr":{
-                this.style_position= [false, false, false, true, false, false, false, false, false];  
-                //this.position_cr = true;
+                this.style_position= [false, false, false, true, false, false, false, false, false];                
                 break;
             };
             case "cm":{
-                 this.style_position= [false, false, false, false, true, false, false, false, false];  
-                //this.position_cm = true;
+                 this.style_position= [false, false, false, false, true, false, false, false, false];              
                 break;
             };
             case "cl":{
-                this.style_position= [false, false, false, false, false, true, false, false, false];  
-                //this.position_cl = true;
+                this.style_position= [false, false, false, false, false, true, false, false, false];                
                 break;
             };
             case "br":{
-                this.style_position= [false, false, false, false, false, false, true, false, false];  
-                //this.position_br = true;
+                this.style_position= [false, false, false, false, false, false, true, false, false];                
                 break;
             };
             case "bm":{
-                this.style_position= [false, false, false, false, false, false, false, true, false];  
-                //this.position_bm = true;
+                this.style_position= [false, false, false, false, false, false, false, true, false];                 
                 break;
             };
             case "bl":{
-                this.style_position= [false, false, false, false, false, false, false, false, true];  
-               // this.position_bl = true;
+                this.style_position= [false, false, false, false, false, false, false, false, true];                 
                 break;
             };
         }
