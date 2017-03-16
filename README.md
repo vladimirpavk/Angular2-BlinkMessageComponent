@@ -45,5 +45,6 @@ Import { CommonComponentsModule} from '/commoncomponents.module';
 ```
 
 Now we can use FlashBox component in our module declared component template using <flash-box> element.
+Inside <flash-box>...</flash-box> decleration is an HTML based user information message.
 
-   
+
