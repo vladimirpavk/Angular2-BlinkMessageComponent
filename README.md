@@ -1,4 +1,4 @@
-# Angular2-FlashBox component example application
+# Angular2-FlashBox component example application 
 FlashBox component is angular2 component provided to display simple user information messages.
 
 Application skeleton used for development can be found here [Angular2 - Application skeleton](https://github.com/vladimirpavk/Angular2-Skeleton/)
@@ -86,7 +86,11 @@ Available values:
   * **bm** - bottom-middle,
   * **bl** - bottom-left
 
+<<<<<<< HEAD
 3. **max-width:** *string*, default: **300px**
+=======
+3. **max-width:** *string*, default: *300px*
+>>>>>>> ae214f7abbddfce0ab7cd40ae5594d5d9145c9ab
 Specify max-width of flash box component
 
 4. **setTimeout** *number*, default: *2000*
