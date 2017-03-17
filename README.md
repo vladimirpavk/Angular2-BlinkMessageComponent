@@ -74,8 +74,15 @@ Place your  HTML based user information message inside *flash-box* element.
 Specify type of flash box. Available types: *default*, *primary*, *success*, *info*, *warning*, *danger* based on 
 default bootstrap label types
 
+<<<<<<< HEAD
 2. **position:** *string*, default: *tr*. Specify position of flash box. Available values:
 ..* tr - top-right.,
+=======
+2. **position:** *string*, default: *tr*
+Specify position of flash box.
+Available values:
+..*tr - top-right,
+>>>>>>> 8f3c2acc3108356ad1f0afb28da9896ebfd4688a
 ..*tm - top-middle,
 ..*tl - top-left,
 ..*cr - center-right,
