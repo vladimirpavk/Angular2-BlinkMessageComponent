@@ -154,7 +154,7 @@ export class FlashBoxComponent implements OnInit{
         }, this._setTimeout);
     }
 
-    public stopFlashing(){
+    public stopFlashing(): void{
         if(this.intervalCounter != 0){
             clearInterval(this.intervalCounter);
             this.intervalCounter=0;
