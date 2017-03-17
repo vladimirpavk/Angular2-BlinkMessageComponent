@@ -87,7 +87,7 @@ Available values:
   * **bm** - bottom-middle,
   * **bl** - bottom-left
 
-3. **max-width:** *string*, default: **300px**
+3. **max-width:** *string*, default: *300px*
 Specify max-width of flash box component
 
 4. **setTimeout** *number*, default: *2000*
