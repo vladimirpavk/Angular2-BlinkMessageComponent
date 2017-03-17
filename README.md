@@ -1,5 +1,4 @@
-# Angular2-FlashBox component
-## example application
+# Angular2-FlashBox component example application
 FlashBox component is angular2 component provided to display simple user information messages.
 
 Application skeleton used for development can be found here [Angular2 - Application skeleton](https://github.com/vladimirpavk/Angular2-Skeleton/)
@@ -104,6 +103,16 @@ In order to cause an flashbox control action use angular2 template local variabl
     </flash-box>
     
     <button (click)="tlv_name.available_action">Cause flashbox action</button>
+```
+#### **Controller example**
+reference component 
+```
+import { FlashBoxComponent } from 'commoncomponents/components/flashbox.component';
+```
+reference component from template local variable using 
+```
+@ViewChild("tlv_name") tlv:FlashBoxComponent;
+tlv_name.available_action();
 ```
 
 ##### **Available actions:**
