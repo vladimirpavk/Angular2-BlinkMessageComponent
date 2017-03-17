@@ -75,19 +75,15 @@ Specify type of flash box. Available types: *default*, *primary*, *success*, *in
 default bootstrap label types
 
 2. **position:** *string*, default: *tr*. Specify position of flash box. Available values:
-..* tr - top-right.,
-
-Specify position of flash box.
-Available values:
-..*tr - top-right,
-..*tm - top-middle,
-..*tl - top-left,
-..*cr - center-right,
-..*cm - center-middle,
-..*cl - center-left,
-..*br - bottom-right,
-..*bm - bottom-middle,
-..*bl - bottom-left
+*tr* - top-right,
+*tm* - top-middle,
+*tl* - top-left,
+*cr* - center-right,
+*cm* - center-middle,
+*cl* - center-left,
+*br* - bottom-right,
+*bm* - bottom-middle,
+*bl* - bottom-left
 
 3. **max-width:** *string*, default: *300px*
 Specify max-width of flash box component
