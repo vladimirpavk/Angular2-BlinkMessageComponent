@@ -21,7 +21,7 @@ export class FlashBoxComponent implements OnInit{
         this.setType();
     }
     
-    private _position: string = "tm";
+    private _position: string = "tr";
     @Input("position")
     set position(value: string){
         this._position= value;
