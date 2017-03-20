@@ -5,11 +5,18 @@
     <title>Angular2 application</title>
     <base href="/"/>
  
-    <!-- 1. Load libraries -->
-    <script src="node_modules/core-js/client/shim.min.js"></script>
+    <!-- 1. Load libraries -offline mode-->
+    <!-- <script src="node_modules/core-js/client/shim.min.js"></script>
     <script src="node_modules/zone.js/dist/zone.js"></script>
     <script src="node_modules/reflect-metadata/Reflect.js"></script>
-    <script src="node_modules/systemjs/dist/system.src.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script> -->
+
+    <!-- 1. Load libraries -online mode-->
+    <script src="https://unpkg.com/core-js/client/shim.min.js"></script>
+    <script src="https://unpkg.com/zone.js/dist/zone.js"></script>
+    <script src="https://unpkg.com/reflect-metadata/Reflect.js"></script>
+    <script src="https://unpkg.com/systemjs@0.19.46/dist/system.src.js"></script>
+    <script src="https://unpkg.com/typescript@2.0.0/lib/typescript.js"></script>
     
     <!-- 2. Configure SystemJS -->
     <script src="www/systemjs.config.js"></script>
