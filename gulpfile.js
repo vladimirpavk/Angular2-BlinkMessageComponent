@@ -104,6 +104,6 @@ gulp.task('clean_docs', function(){
 });
 
 gulp.task('make_docs', ['clean_docs'], function(){
-    return gulp.src(['client/app/**/*.js', 'client/app/**/*.js.map', 'client/app/**/*.html'], { base: 'client'}).
+    return gulp.src(['client/app/**/*.js', 'client/app/**/*.js.map', 'client/app/**/*.html', 'client/app/**/*.css'], { base: 'client'}).
         pipe(gulp.dest('docs'));
 });
