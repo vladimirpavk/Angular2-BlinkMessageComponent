@@ -1,8 +1,33 @@
-<head>
-<title>Angular 2 - FlashBox Component - Example Application</title>
+<html>
+ 
+  <head>
+    <!DOCTYPE html>
+    <title>Angular2 application</title>
+    <base href="/Angular2-FlashBoxComponent/">
+ 
+    <!-- 1. Load libraries -offline mode-->
+    <!-- <script src="node_modules/core-js/client/shim.min.js"></script>
+    <script src="node_modules/zone.js/dist/zone.js"></script>
+    <script src="node_modules/reflect-metadata/Reflect.js"></script>
+    <script src="node_modules/systemjs/dist/system.src.js"></script> -->
 
-</head>
-
-<body>
-    <h1>Angular 2 - FlashBox Component - Example Application</h1>
-</body>
+    <!-- 1. Load libraries -online mode-->
+    <script src="https://unpkg.com/core-js/client/shim.min.js"></script>
+    <script src="https://unpkg.com/zone.js/dist/zone.js"></script>
+    <script src="https://unpkg.com/reflect-metadata/Reflect.js"></script>
+    <script src="https://unpkg.com/systemjs@0.19.46/dist/system.src.js"></script>
+    <script src="https://unpkg.com/typescript@2.0.0/lib/typescript.js"></script>
+    
+    <!-- 2. Configure SystemJS -->
+    <script src="systemjs.config.js"></script>
+    <script>
+         System.import('app').catch(function(err){ console.error(err); });
+    </script>
+ 
+  </head>
+  <!-- 3. Display the application -->
+  <body>
+    <my-app>Loading...</my-app>
+  </body>
+ 
+</html>

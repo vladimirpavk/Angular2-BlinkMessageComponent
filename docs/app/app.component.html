@@ -1,0 +1,44 @@
+<h1 style="text-decoration: underline">FlashBox Component demo application</h1>
+
+<label for="sel1">Select FlashBox position: </label>
+<select #select_position id="sel1" style="width: 200px">
+    <option value="tr">Top right</option>
+    <option value="tm">Top middle</option>
+    <option value="tl">Top left</option>
+    <option value="cr">Center right</option>
+    <option value="cm">Center middle</option>
+    <option value="cl">Center left</option>
+    <option value="br">Bottom right</option>
+    <option value="bm">Bottom middle</option>
+    <option value="bl">Bottom right</option>
+</select>
+<br>
+
+<label for="sel2">Select FlashBox type: </label>
+<select #select_type id="sel2" style="width: 200px">
+    <option value="default">Default</option>
+    <option value="primary">Primary</option>
+    <option value="success">Success</option>
+    <option value="info">Info</option>
+    <option value="warning">Warning</option>
+    <option value="danger">Danger</option>
+</select>
+<br>
+
+<h2>Select FlashBox action:</h2>
+<button (click)="bm1.show()">Show</button>
+<button (click)="bm1.hide()">Hide</button>
+<br>
+<button (click)="bm1.startFlashing()">Start flashing</button>
+<button (click)="bm1.stopFlashing()">Stop flashing</button>
+<button (click)="bm1.flashOnce()">Flash once</button>
+<br>
+
+<flash-box [type]="select_type.value" [position]="select_position.value" max-width="300px" setTimeout=2000 #bm1>
+   <div style="border-type: solid; border-width:2px">
+       <label style="color: rgb(0,0,0); text-decoration: underline;">Information message</label>
+   </div>
+   <label>
+       User successfully deleted...
+   </label>
+</flash-box>

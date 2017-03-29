@@ -1,0 +1,22 @@
+<div 
+     [class.show]="!isShown"
+     class="hide type_common"
+     [class.type_default]="style_type[0]"
+     [class.type_primary]="style_type[1]"
+     [class.type_success]="style_type[2]"
+     [class.type_info]="style_type[3]"
+     [class.type_warning]="style_type[4]"
+     [class.type_danger]="style_type[5]"
+     [class.position_tr]="style_position[0]"
+     [class.position_tm]="style_position[1]"
+     [class.position_tl]="style_position[2]"
+     [class.position_cr]="style_position[3]"
+     [class.position_cm]="style_position[4]"
+     [class.position_cl]="style_position[5]"
+     [class.position_br]="style_position[6]"
+     [class.position_bm]="style_position[7]"
+     [class.position_bl]="style_position[8]"
+     [class.style.max-width.px]="maxwidth"
+>
+  <ng-content></ng-content>
+</div>

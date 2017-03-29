@@ -1,9 +1,7 @@
 import { Component, OnInit, Input } from '@angular/core';
 
-let __moduleName: any;
-
 @Component({
-    moduleId: __moduleName,
+    moduleId: module.id,
     selector: 'flash-box',    
     templateUrl: 'flashbox.component.html',
     styleUrls: ['flashbox.component.css']

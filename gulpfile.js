@@ -98,3 +98,12 @@ gulp.task('default', ['watch_server', 'watch_client', 'watch_client_html'], func
 //gulp.task('compile_everything', ['compile_server_app', 'compile_client_app'], function(){
   //  console.log("Compiling everything !!!");
 //})
+
+gulp.task('clean_docs', function(){
+    return gulp.src('docs/app').pipe(gulpClean());
+});
+
+gulp.task('make_docs', ['clean_docs'], function(){
+    return gulp.src(['client/app/**/*.js', 'client/app/**/*.js.map', 'client/app/**/*.html'], { base: 'client'}).
+        pipe(gulp.dest('docs'));
+});
