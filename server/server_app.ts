@@ -10,7 +10,7 @@ export class ServerApp {
         this._app = express();
         this._port = port;
 
-        //this._app.use('/node_modules', express.static(path.resolve(__dirname, '../node_modules')));        
+        this._app.use('/node_modules', express.static(path.resolve(__dirname, '../node_modules')));        
         //this._app.use('/www', express.static(path.resolve(__dirname, '../client')));
         //this._app.get('/docs/*', (req,res)=>this._renderDocs(req,res));
         this._app.get('/*', (req, res)=>this._renderPage(req, res));        

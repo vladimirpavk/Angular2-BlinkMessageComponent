@@ -7,9 +7,9 @@
     paths: {
       // paths serve as alias
       //use bottom line for local repositories
-      //'npm:': 'node_modules/'
+      'npm:': 'node_modules/'
       //use bottom line for online repositories
-      'npm:': 'https://unpkg.com/'
+      //'npm:': 'https://unpkg.com/'
     },
     // map tells the System loader where to look for things
     map: {

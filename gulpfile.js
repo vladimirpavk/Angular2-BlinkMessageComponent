@@ -9,7 +9,8 @@ var browserSync = require('browser-sync');
   console.log("Initiating browser sync configuration...");
     browserSync.init(
         {
-        proxy: "http://localhost:3036"                       
+            proxy: "http://localhost:3036/index.html",
+            browser: ["chrome"],// "firefox"],                              
         }
     );
 

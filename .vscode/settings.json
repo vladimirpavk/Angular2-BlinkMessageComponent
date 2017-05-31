@@ -8,6 +8,7 @@
        "**/.git": true,
        "client/app/**/.js.map": true,
        "client/app/**/*.js": true,
+       "client/app/**/*.d.ts": true,
        "server/**/*.js.map": true,
        "server/**/*.js": true
       }
